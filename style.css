@@ -5,7 +5,7 @@
 
 /* Header */
 
-body {
+.main-section {
     margin: 80px 100px;
 }
 
@@ -37,6 +37,10 @@ nav a {
 .initial-section {
     display: flex;
     margin-bottom: 100px;
+    background-image: url(images/Circle\ design.svg);
+    background-repeat: no-repeat;
+    background-position: right 70px top;
+    background-size: 27%;
 }
 
 .half-width {
@@ -48,7 +52,13 @@ nav a {
 }
 
 .half-width img {
-    margin-left: 300px;
+    margin-left: 315px;
+    margin-top: 20px;
+}
+
+.half-width:hover img {
+    transform: scale(1.5) rotate3d(5, 0, 0, 45deg);
+    transition: 3s ease-in-out;
 }
 
 .half-width p {
@@ -169,6 +179,7 @@ nav a {
 
 .bonus-section {
     display: flex;
+    margin-bottom: 150px;
 }
 
 .explore {
@@ -180,6 +191,12 @@ nav a {
     margin-left: 150px;
     box-shadow: 0px 0px 40px rgba(121, 201, 201, 0.507);
     border-radius: 20px;
+    animation: explore;
+}
+
+.explore:hover img {
+    transform: scale(1.2) rotate3d(5, -3, 2, 45deg);
+    transition: 3s ease-in-out;
 }
 
 .explore h1 {
@@ -189,4 +206,206 @@ nav a {
 .explore p {
     font-family: 'Inter', sans-serif;
     font-size: 1.25em;
+}
+
+
+/* footer section */
+
+footer {
+    text-align: center;
+    background-color: rgb(5, 5, 77);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+}
+
+footer h1 {
+    font-size: 1.80em;
+}
+
+footer p {
+    font-size: 1.25em;
+}
+
+footer a {
+    font-size: 1.50em;
+    margin-right: 20px;
+    color: white;
+    box-shadow: 90px rgb(245, 245, 245);
+    border-radius: 50px;
+}
+
+.copyright {
+    font-size: 15px;
+}
+
+
+/* responsive section for mobile 0px - 576px */
+
+@media screen and (max-width :576px) {
+    .main-section {
+        margin-left: 20px;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        display: none;
+    }
+    header h1 {
+        font-size: 30px;
+    }
+    .initial-section {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        background-image: none;
+    }
+    .half-width h1 {
+        font-size: 30px;
+        width: max-content;
+        text-align: center;
+    }
+    .half-width P {
+        text-align: center;
+    }
+    .half-width img {
+        margin-left: 2px;
+        width: 250px;
+    }
+    .link-btn {
+        font-size: 10px;
+        margin-right: auto;
+        margin-left: 30px;
+    }
+    .popular-section {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-right: 15px;
+        margin-left: 2px;
+    }
+    .product-section {
+        width: 330px;
+        Height: 510px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 40px rgba(157, 207, 207, 0.507);
+        border-radius: 20px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .product-image img {
+        width: 290px;
+    }
+    .btn-see-more {
+        margin-top: 30px;
+    }
+    .action-camera {
+        padding-top: 50px;
+    }
+    .bonus-section {
+        display: grid;
+        grid-auto-columns: 1fr;
+    }
+    .bonus-section img {
+        margin-left: 0;
+        width: 250px;
+    }
+    .explore h1 {
+        font-size: 28px;
+        width: max-content;
+        text-align: center;
+    }
+    .explore p {
+        text-align: center;
+    }
+}
+
+
+/* responsive section for tablet 0px - 768px */
+
+@media (min-width: 577px) and (max-width: 768px) {
+    body {
+        background-color: rgb(229, 239, 241);
+    }
+    .main-section {
+        margin-left: 20px;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        display: none;
+    }
+    header h1 {
+        font-size: 30px;
+    }
+    .initial-section {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        background-image: none;
+    }
+    .half-width h1 {
+        font-size: 40px;
+        width: max-content;
+        text-align: center;
+    }
+    .half-width P {
+        text-align: center;
+        margin-left: 100px;
+    }
+    .half-width img {
+        margin-left: 80px;
+        width: max-content;
+        align-items: center;
+    }
+    .link-btn {
+        font-size: 20px;
+    }
+    .popular-section {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        margin-right: 15px;
+        margin-left: 2px;
+    }
+    .product-section {
+        width: 330px;
+        Height: 510px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 40px rgba(157, 207, 207, 0.507);
+        border-radius: 20px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .bonus-section {
+        display: grid;
+        text-align: center;
+    }
+    .bonus-section img {
+        width: 250px;
+    }
+    .explore h1 {
+        font-size: 20px;
+        margin-left: 100px;
+        width: max-content;
+    }
+    .explore p {
+        margin-left: 120px;
+    }
+    .link-btn {
+        font-size: 20px;
+        margin-right: auto;
+        margin-left: 100px;
+    }
 }
